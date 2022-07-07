@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun  main(){
-        println("hihiaaaaahhhầdsafsfasf")
+        println("hihiaaaaahhhầdsafsfasaaaaaaaaaaaaaf")
     }
 }
