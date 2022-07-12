@@ -23,6 +23,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.TTS_PROJECT1" >
         <activity
+            android:name="vn.mobifone.tts_project1.ImageDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name="vn.mobifone.tts_project1.ListImageInFolderActivity"
             android:exported="false" />
         <activity

@@ -3,8 +3,6 @@ package vn.mobifone.tts_project1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.e
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +14,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import vn.mobifone.tts_project1.adapter.StickersAdapter
 import vn.mobifone.tts_project1.api.ApiService
-import vn.mobifone.tts_project1.interface1.OnItemClickListener
+import vn.mobifone.tts_project1.onItemClickInterface.OnItemClickListener
 import vn.mobifone.tts_project1.model.Data
 import vn.mobifone.tts_project1.model.Stickers
 

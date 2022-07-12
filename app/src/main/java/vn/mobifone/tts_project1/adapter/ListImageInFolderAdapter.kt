@@ -9,17 +9,30 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import vn.mobifone.tts_project1.R
+import vn.mobifone.tts_project1.onItemClickInterface.OnItemClickListener
 
 class ListImageInFolderAdapter(
     val context: Context,
     val startUpUrl: String,
     val prefix: String,
     val imageCount: Int,
-    val folder: String
+    val folder: String,
+    val listener: OnItemClickListener
 ) : RecyclerView.Adapter<ListImageInFolderAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var image: ImageView = itemView.findViewById(R.id.list_img_folder)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,7 +42,6 @@ class ListImageInFolderAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        for (i in 1..imageCount) {
         val pos = position.inc()
         val imageURL: String? =
             startUpUrl + folder + "/" + folder + "_" + prefix + pos + ".png"
@@ -39,7 +51,6 @@ class ListImageInFolderAdapter(
             .override(100, 100)
             .placeholder(R.drawable.ic_launcher_background)
             .into(holder.image)
-//        }
     }
 
     override fun getItemCount(): Int {

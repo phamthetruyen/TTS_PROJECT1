@@ -21,7 +21,7 @@
 13-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:7:22-78
 14
 15    <application
-15-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:9:5-28:19
+15-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:9:5-31:19
 16        android:allowBackup="true"
 16-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:10:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -40,49 +40,55 @@
 24-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:15:9-50
 25        <activity
 25-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:16:9-18:40
-26            android:name="vn.mobifone.tts_project1.ListImageInFolderActivity"
-26-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:13-54
+26            android:name="vn.mobifone.tts_project1.ImageDetailsActivity"
+26-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:13-49
 27            android:exported="false" />
 27-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:18:13-37
 28        <activity
-28-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:19:9-27:20
-29            android:name="vn.mobifone.tts_project1.MainActivity"
-29-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:13-41
-30            android:exported="true" >
-30-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:21:13-36
-31            <intent-filter>
-31-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:13-26:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:23:17-69
-32-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:23:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:25:17-77
-34-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:25:27-74
-35            </intent-filter>
-36        </activity>
-37
-38        <provider
-38-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-39            android:name="androidx.startup.InitializationProvider"
-39-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-40            android:authorities="vn.mobifone.tts_project1.androidx-startup"
-40-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-41            android:exported="false" >
-41-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-42            <meta-data
-42-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-43                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-44                android:value="androidx.startup" />
-44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+28-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:19:9-21:40
+29            android:name="vn.mobifone.tts_project1.ListImageInFolderActivity"
+29-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:13-54
+30            android:exported="false" />
+30-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:21:13-37
+31        <activity
+31-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:9-30:20
+32            android:name="vn.mobifone.tts_project1.MainActivity"
+32-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:23:13-41
+33            android:exported="true" >
+33-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:24:13-36
+34            <intent-filter>
+34-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:25:13-29:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:26:17-69
+35-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:26:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:28:17-77
+37-->C:\Users\HP\AndroidStudioProjects\TTS_PROJECT1\app\src\main\AndroidManifest.xml:28:27-74
+38            </intent-filter>
+39        </activity>
+40
+41        <provider
+41-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+42            android:name="androidx.startup.InitializationProvider"
+42-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+43            android:authorities="vn.mobifone.tts_project1.androidx-startup"
+43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+44            android:exported="false" >
+44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
 45            <meta-data
-45-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HP\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-46                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-46-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HP\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+46                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
 47                android:value="androidx.startup" />
-47-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HP\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-48        </provider>
-49    </application>
-50
-51</manifest>
+47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+48            <meta-data
+48-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HP\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+49                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+49-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HP\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+50                android:value="androidx.startup" />
+50-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HP\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+51        </provider>
+52    </application>
+53
+54</manifest>

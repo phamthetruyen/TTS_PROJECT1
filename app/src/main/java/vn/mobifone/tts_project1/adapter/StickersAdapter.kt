@@ -1,8 +1,6 @@
 package vn.mobifone.tts_project1.adapter
 
 import android.content.Context
-import android.util.Log
-import android.util.Log.e
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import vn.mobifone.tts_project1.R
-import vn.mobifone.tts_project1.interface1.OnItemClickListener
+import vn.mobifone.tts_project1.onItemClickInterface.OnItemClickListener
 import vn.mobifone.tts_project1.model.Stickers
 
 class StickersAdapter(
