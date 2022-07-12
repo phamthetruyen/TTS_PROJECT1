@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "vn.mobifone.tts_project1.app-mergeDebugResources-24:/values-v18/values-v18.xml",
+            "outputFile": "vn.mobifone.tts_project1.app-mergeDebugResources-25:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\b337e567a97552d20c2e1a823a166141\\transformed\\appcompat-1.4.2\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\8e898484a1c13ffd3f7c43ca6077999f\\transformed\\appcompat-1.4.2\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

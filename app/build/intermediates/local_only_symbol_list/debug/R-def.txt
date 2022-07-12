@@ -25,4 +25,5 @@ layout list_image_folder_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string hello_blank_fragment
 style Theme.TTS_PROJECT1
