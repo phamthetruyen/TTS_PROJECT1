@@ -54,7 +54,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         setContentView(R.layout.activity_main)
 
         initPreferences()
+        initView()
+        refreshCache()
+    }
 
+    private fun initView() {
         listFolderRecyclerView = findViewById(R.id.folder_recycle)
         listFolderRecyclerView.setHasFixedSize(true)
         randomFolderRecyclerView = findViewById(R.id.random_folder)
@@ -65,8 +69,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
         gridLayoutManagerRandomFolder = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         randomFolderRecyclerView.layoutManager = gridLayoutManagerRandomFolder
-
-        refreshCache()
     }
 
     private fun refreshCache() {
