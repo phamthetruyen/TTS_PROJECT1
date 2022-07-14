@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log.e
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
@@ -14,7 +15,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import vn.mobifone.tts_project1.adapter.StickersAdapter
+import vn.mobifone.tts_project1.adapter.ListFolderAdapter
+import vn.mobifone.tts_project1.adapter.RandomFolderAdapter
 import vn.mobifone.tts_project1.api.ApiService
 import vn.mobifone.tts_project1.onItemClickInterface.OnItemClickListener
 import vn.mobifone.tts_project1.model.Data
@@ -23,9 +25,12 @@ import vn.mobifone.tts_project1.util.Constants
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
-    lateinit var stickersAdapter: StickersAdapter
-    lateinit var linearLayoutManager: LinearLayoutManager
-    lateinit var recyclerView: RecyclerView
+    lateinit var stickersAdapter: ListFolderAdapter
+    lateinit var randomStickersAdapter : RandomFolderAdapter
+    lateinit var gridLayoutManagerListFolder: GridLayoutManager
+    lateinit var gridLayoutManagerRandomFolder: LinearLayoutManager
+    lateinit var listFolderRecyclerView: RecyclerView
+    lateinit var randomFolderRecyclerView: RecyclerView
 
     var listStickers : ArrayList<Stickers>?= null
     var startUrl : String?= null
@@ -41,10 +46,16 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
         initPreferences()
 
-        recyclerView = findViewById(R.id.folder_recycle)
-        recyclerView.setHasFixedSize(true)
-        linearLayoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = linearLayoutManager
+        listFolderRecyclerView = findViewById(R.id.folder_recycle)
+        listFolderRecyclerView.setHasFixedSize(true)
+        randomFolderRecyclerView = findViewById(R.id.random_folder)
+        randomFolderRecyclerView.setHasFixedSize(true)
+
+        gridLayoutManagerListFolder = GridLayoutManager(this, 3, RecyclerView.VERTICAL, false)
+        listFolderRecyclerView.layoutManager = gridLayoutManagerListFolder
+
+        gridLayoutManagerRandomFolder = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
+        randomFolderRecyclerView.layoutManager = gridLayoutManagerRandomFolder
 
         getData()
     }
@@ -84,16 +95,22 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                         editor.putInt(Constants.COUNT, count)
                         logCache()
                     } else {
-                        editor.putInt(Constants.COUNT, count.inc())
+                        count = count.inc()
+                        editor.putInt(Constants.COUNT, count)
                     }
                 } else {
                     editor.putInt(Constants.COUNT, count)
                 }
                 editor.apply()
 
-                stickersAdapter = StickersAdapter(baseContext, listStickers, startUrl, prefix, this@MainActivity)
+                stickersAdapter = ListFolderAdapter(baseContext, listStickers, startUrl, prefix, this@MainActivity)
                 stickersAdapter.notifyDataSetChanged()
-                recyclerView.adapter = stickersAdapter
+                listFolderRecyclerView.adapter = stickersAdapter
+
+                randomStickersAdapter = RandomFolderAdapter(baseContext, listStickers!!, startUrl, prefix, this@MainActivity)
+                randomStickersAdapter.notifyDataSetChanged()
+                randomFolderRecyclerView.adapter = randomStickersAdapter
+
             }
 
             override fun onFailure(call: Call<Data?>, t: Throwable) {

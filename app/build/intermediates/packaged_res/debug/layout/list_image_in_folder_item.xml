@@ -2,19 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+    android:layout_marginBottom="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_gravity="center_vertical"
-        app:cardCornerRadius="70dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp">
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="@color/teal_200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/list_img_folder"
-            android:layout_width="150dp"
-            android:layout_height="150dp"/>
+            android:id="@+id/list_img_in_folder_item"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
 
     </androidx.cardview.widget.CardView>
 

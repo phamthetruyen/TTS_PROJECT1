@@ -2769,8 +2769,11 @@ id line1
 id line3
 id linear
 id listMode
-id list_img_folder
+id list_img_folder_folder_img
+id list_img_folder_name
 id list_img_folder_recycle
+id list_img_folder_total_image
+id list_img_in_folder_item
 id list_item
 id masked
 id match_constraint
@@ -2871,6 +2874,9 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
+id random_folder
+id random_folder_img
+id random_folder_name
 id ratio
 id rectangles
 id reverseSawtooth
@@ -2992,7 +2998,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id txtfolder
 id unchecked
 id uniform
 id unlabeled
@@ -3124,10 +3129,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout folder_item
 layout image_detail
-layout list_image_folder
-layout list_image_folder_item
+layout list_folder_item
+layout list_image_in_folder
+layout list_image_in_folder_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3191,6 +3196,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout random_folder_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

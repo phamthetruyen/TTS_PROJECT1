@@ -33,7 +33,7 @@ class ImageDetailsActivity : AppCompatActivity() {
         textView.text = position.toString()
         Glide.with(this)
             .load(imageURL)
-            .override(200, 200)
+            .override(300, 300)
             .placeholder(R.drawable.ic_launcher_background)
             .into(imageView)
     }

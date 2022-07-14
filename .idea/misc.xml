@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/folder_item.xml" value="0.278125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/fragment_1.xml" value="0.254981884057971" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/image_detail.xml" value="0.371875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/list_folder_item.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/list_image_folder.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/list_image_folder_item.xml" value="0.30427350427350425" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/list_image_in_folder.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/list_image_in_folder_item.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/random_folder_item.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TTS_PROJECT1/app/src/main/res/layout/test.xml" value="0.2803442028985507" />
       </map>
     </option>
   </component>

@@ -1,11 +1,23 @@
 [
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-pngs-22:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_list_folder_item.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\list_folder_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_test.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\test.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_image_detail.xml.flat",
@@ -32,12 +44,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_random_folder_item.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\random_folder_item.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "vn.mobifone.tts_project1.app-merged_res-27:/layout_image_detail.xml.flat",
@@ -60,6 +72,10 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_list_image_in_folder.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\list_image_in_folder.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_folder_item.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\folder_item.xml"
     },
@@ -74,6 +90,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_list_image_folder_item.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\list_image_folder_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\layout_list_image_in_folder_item.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-main-29:\\layout\\list_image_in_folder_item.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.3.3\\vn.mobifone.tts_project1.app-merged_res-27:\\mipmap-hdpi_ic_launcher_round.webp.flat",

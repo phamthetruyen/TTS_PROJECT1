@@ -21,7 +21,7 @@ class ListImageInFolderAdapter(
 ) : RecyclerView.Adapter<ListImageInFolderAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        var image: ImageView = itemView.findViewById(R.id.list_img_folder)
+        var image: ImageView = itemView.findViewById(R.id.list_img_in_folder_item)
 
         init {
             itemView.setOnClickListener(this)
@@ -37,7 +37,7 @@ class ListImageInFolderAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var view =
-            LayoutInflater.from(context).inflate(R.layout.list_image_folder_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.list_image_in_folder_item, parent, false)
         return ViewHolder(view)
     }
 
