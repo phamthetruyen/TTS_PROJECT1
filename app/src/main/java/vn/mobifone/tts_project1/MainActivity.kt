@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var sharedPref : SharedPreferences
     private lateinit var editor : SharedPreferences.Editor
-    private var count : Int = 0
+    private var count : Int = 1
 
     private val retrofitBuilder = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private fun refreshCache() {
         if (sharedPref.getInt(Constants.COUNT, count) != null) {
-            if (count!! >= 5) {
+            if (count >= 5) {
                 count = 0
                 editor.putInt(Constants.COUNT, count)
                 getData()
@@ -93,6 +93,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         editor.putString(Constants.LISTSTICKERS, listStickers.toString())
         editor.putString(Constants.START_URL, startUrl)
         editor.putString(Constants.PREFIX, prefix)
+        editor.apply()
     }
 
     private fun initPreferences() {
@@ -109,6 +110,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 startUrl = responseBody.start_url
                 prefix = responseBody.prefix_
 
+                logCache()
                 recycleEvent()
             }
 

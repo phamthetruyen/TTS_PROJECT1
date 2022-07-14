@@ -34,10 +34,11 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"/>
+            android:layout_height="50dp"/>
 
     </LinearLayout>
 

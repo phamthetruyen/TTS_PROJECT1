@@ -46,7 +46,7 @@ class ListFolderAdapter(
         val imageURL: String? =
             start_url + listStickers?.get(position)?.folder + "/" + listStickers?.get(position)?.folder + "_" + prefix_ + "1" + ".png"
 //        Log.e("imageURL", "String" + imageURL)
-        holder.foldername.text = listStickers?.get(position)?.folder.toString()
+        holder.foldername.text = listStickers?.get(position)?.name_en.toString()
         Glide.with(context)
             .load(imageURL)
             .override(100, 100)

@@ -38,7 +38,7 @@ class RandomFolderAdapter(
         e("tmp valie", " $tmpValue")
         val imageURL: String? =
             start_url + listStickers?.get(tmpValue)?.folder + "/" + listStickers?.get(tmpValue)?.folder + "_" + prefix_ + "1" + ".png"
-        holder.foldername.text = listStickers?.get(tmpValue)?.folder.toString()
+        holder.foldername.text = listStickers?.get(tmpValue)?.name_en.toString()
         Glide.with(context)
             .load(imageURL)
             .override(100, 100)
