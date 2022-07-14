@@ -23,10 +23,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.TTS_PROJECT1" >
         <activity
-            android:name="vn.mobifone.tts_project1.ListImgFolderActivity"
+            android:name="vn.mobifone.tts_project1.DetailImgActivity"
             android:exported="false" />
         <activity
-            android:name="vn.mobifone.tts_project1.DetailImgActivity"
+            android:name="vn.mobifone.tts_project1.ListImgFolderActivity"
             android:exported="false" />
         <activity
             android:name="vn.mobifone.tts_project1.MainActivity"

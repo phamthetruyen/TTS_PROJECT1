@@ -60,12 +60,11 @@ class ListImgFolderActivity : AppCompatActivity(), ClickItem {
     }
 
     override fun onItemClick(position: Int) {
-        val intent =Intent(this, DetailImgActivity::class.java)
-        intent.putExtra(Constants.STICKER,sticker)
-        intent.putExtra(Constants.STARTURL,baseurl)
-        intent.putExtra(Constants.PREFIX,prefix)
-        intent.putExtra(Constants.POSITION,position.inc())
+        val intent = Intent(this, DetailImgActivity::class.java)
+        intent.putExtra(Constants.STICKER, sticker)
+        intent.putExtra(Constants.STARTURL, baseurl)
+        intent.putExtra(Constants.PREFIX, prefix)
+        intent.putExtra(Constants.POSITION, position.inc())
         startActivity(intent)
     }
-
 }
