@@ -60,9 +60,9 @@ class ListImageInFolderActivity : AppCompatActivity(), OnItemClickListener {
 
         textViewFolderName.text = stickerObj.name_en.toString()
         textViewTotalImage.text = "${stickerObj.totalImage.toString()} images"
+
         val imageURL: String? =
             startURL + stickerObj.folder + "/" + stickerObj.folder + "_" + prefix + "1" + ".png"
-        Log.e("a", "dada $imageURL")
         Glide.with(this)
             .load(imageURL)
             .override(100, 100)

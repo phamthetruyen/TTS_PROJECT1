@@ -22,7 +22,7 @@ class RandomFolderAdapter(
     private val listener: OnItemClickListener
 ) : RecyclerView.Adapter<RandomFolderAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var image: ImageView = itemView.findViewById(R.id.random_folder_img)
         var foldername: TextView = itemView.findViewById(R.id.random_folder_name)
     }
@@ -33,7 +33,8 @@ class RandomFolderAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var tmpValue : Int = Random.nextInt(1, listStickers!!.size)
+//        var tmpValue : Int = Random.nextInt(listStickers!!.size - 1) + 1
+        var tmpValue : Int = (1 until listStickers!!.size).random()
         e("tmp valie", " $tmpValue")
         val imageURL: String? =
             start_url + listStickers?.get(tmpValue)?.folder + "/" + listStickers?.get(tmpValue)?.folder + "_" + prefix_ + "1" + ".png"

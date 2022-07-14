@@ -22,6 +22,7 @@ import vn.mobifone.tts_project1.onItemClickInterface.OnItemClickListener
 import vn.mobifone.tts_project1.model.Data
 import vn.mobifone.tts_project1.model.Stickers
 import vn.mobifone.tts_project1.util.Constants
+import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
@@ -38,7 +39,15 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var sharedPref : SharedPreferences
     private lateinit var editor : SharedPreferences.Editor
-    private var count : Int = 5
+    private var count : Int = 0
+
+    private val retrofitBuilder = Retrofit.Builder()
+        .addConverterFactory(GsonConverterFactory.create())
+        .baseUrl(Constants.BASE_URL)
+        .build()
+        .create(ApiService::class.java)
+
+    private val retrofitData = retrofitBuilder.getData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,14 +66,33 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         gridLayoutManagerRandomFolder = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         randomFolderRecyclerView.layoutManager = gridLayoutManagerRandomFolder
 
-        getData()
+        refreshCache()
+    }
+
+    private fun refreshCache() {
+        if (sharedPref.getInt(Constants.COUNT, count) != null) {
+            if (count!! >= 5) {
+                count = 0
+                editor.putInt(Constants.COUNT, count)
+                getData()
+                logCache()
+            } else {
+                getData()
+                count = count.inc()
+                editor.putInt(Constants.COUNT, count)
+            }
+        } else {
+            editor.putInt(Constants.COUNT, 0)
+            getData()
+            logCache()
+        }
+        editor.apply()
     }
 
     private fun logCache() {
         editor.putString(Constants.LISTSTICKERS, listStickers.toString())
         editor.putString(Constants.START_URL, startUrl)
         editor.putString(Constants.PREFIX, prefix)
-        editor.apply()
     }
 
     private fun initPreferences() {
@@ -73,14 +101,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     private fun getData() {
-        val retrofitBuilder = Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(Constants.BASE_URL)
-            .build()
-            .create(ApiService::class.java)
-
-        val retrofitData = retrofitBuilder.getData()
-
         retrofitData.enqueue(object : Callback<Data?> {
             override fun onResponse(call: Call<Data?>, response: Response<Data?>) {
                 val responseBody = response.body()!!
@@ -89,28 +109,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 startUrl = responseBody.start_url
                 prefix = responseBody.prefix_
 
-                if (sharedPref.getInt(Constants.COUNT, count) != null) {
-                    if (count >= 5) {
-                        count = 0
-                        editor.putInt(Constants.COUNT, count)
-                        logCache()
-                    } else {
-                        count = count.inc()
-                        editor.putInt(Constants.COUNT, count)
-                    }
-                } else {
-                    editor.putInt(Constants.COUNT, count)
-                }
-                editor.apply()
-
-                stickersAdapter = ListFolderAdapter(baseContext, listStickers, startUrl, prefix, this@MainActivity)
-                stickersAdapter.notifyDataSetChanged()
-                listFolderRecyclerView.adapter = stickersAdapter
-
-                randomStickersAdapter = RandomFolderAdapter(baseContext, listStickers!!, startUrl, prefix, this@MainActivity)
-                randomStickersAdapter.notifyDataSetChanged()
-                randomFolderRecyclerView.adapter = randomStickersAdapter
-
+                recycleEvent()
             }
 
             override fun onFailure(call: Call<Data?>, t: Throwable) {
@@ -118,6 +117,16 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 Toast.makeText(this@MainActivity, "Loi khi lay data", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    private fun recycleEvent() {
+        stickersAdapter = ListFolderAdapter(baseContext, listStickers, startUrl, prefix, this@MainActivity)
+        stickersAdapter.notifyDataSetChanged()
+        listFolderRecyclerView.adapter = stickersAdapter
+
+        randomStickersAdapter = RandomFolderAdapter(baseContext, listStickers!!, startUrl, prefix, this@MainActivity)
+        randomStickersAdapter.notifyDataSetChanged()
+        randomFolderRecyclerView.adapter = randomStickersAdapter
     }
 
     override fun onItemClick(position: Int) {
