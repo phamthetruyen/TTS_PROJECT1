@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable decord
+drawable decordbottom
+drawable ic_download
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_search
+drawable loading
+id detaiImg
+id detailNameImg
+id img_Folder
+id img_FolderRandom
+id img_ListImg
+id nameFolder
+id rv_folder
+id rv_folder_random
+id rv_listImgFolder
+id txt_Random
+layout activity_detail_img
+layout activity_list_img_folder
+layout activity_main
+layout item_folder
+layout item_folder_random
+layout item_image
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.TTS_PROJECT1
