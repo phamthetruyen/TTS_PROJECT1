@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\ADMIN\.gradle\caches\transforms-3\d42d50fafb4b7b4030bb68e4024ba384\transformed\core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ADMIN\.gradle\caches\transforms-3\1972531f56b610244434d5390bec6f54\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ADMIN\.gradle\caches\transforms-3\92c6b98093f4d4740952f38ea54d4650\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -47,33 +47,33 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ADMIN\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ADMIN\.gradle\caches\transforms-3\46197eece4813ea272dedaf6d97f0704\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\ADMIN\.gradle\caches\transforms-3\bf11d5f709f8b4982d65ae78eb7a0a6a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\ADMIN\.gradle\caches\transforms-3\fa71066934ce7b959416ab07c2d56d3b\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:3:5-39
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-36:12
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:1-31:12
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:4:5-79
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:4:5-79
 	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:4:22-76
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:4:22-76
 uses-permission#android.permission.INTERNET
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:6:5-34:19
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:6:5-29:19
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ADMIN\.gradle\caches\transforms-3\1972531f56b610244434d5390bec6f54\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ADMIN\.gradle\caches\transforms-3\1972531f56b610244434d5390bec6f54\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ADMIN\.gradle\caches\transforms-3\92c6b98093f4d4740952f38ea54d4650\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -95,49 +95,49 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AD
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\ADMIN\.gradle\caches\transforms-3\adacc4bbdca3c037c01e5031782c646c\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:12:9-50
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:12:9-50
 activity#vn.mobifone.tts_project1.MainActivity3
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:13:9-15:40
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:13:9-15:40
 	android:exported
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:15:13-37
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:15:13-37
 	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:14:13-42
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:14:13-42
 activity#vn.mobifone.tts_project1.MainActivity2
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:16:9-24:20
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:16:9-19:20
 	android:exported
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:13-42
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:19:13-23:29
-action#android.intent.action.MAIN
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:17-69
-	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:17-77
-	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:13-42
 activity#vn.mobifone.tts_project1.MainActivity
-ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:25:9-33:20
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:27:13-36
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml:26:13-41
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:26:27-74
 uses-sdk
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\ADMIN\.gradle\caches\transforms-3\d42d50fafb4b7b4030bb68e4024ba384\transformed\core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\ADMIN\.gradle\caches\transforms-3\d42d50fafb4b7b4030bb68e4024ba384\transformed\core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ADMIN\.gradle\caches\transforms-3\1972531f56b610244434d5390bec6f54\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
@@ -224,16 +224,16 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\ADMIN\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\ADMIN\.gradle\caches\transforms-3\bf11d5f709f8b4982d65ae78eb7a0a6a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\ADMIN\.gradle\caches\transforms-3\fa71066934ce7b959416ab07c2d56d3b\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\ADMIN\.gradle\caches\transforms-3\fa71066934ce7b959416ab07c2d56d3b\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidCty\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		ADDED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
+		INJECTED from E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\ADMIN\.gradle\caches\transforms-3\0598df94f460c67e853f90789c9d40d1\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\ADMIN\.gradle\caches\transforms-3\c4217aea2ca3d9a23241dc893df048d3\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
