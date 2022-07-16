@@ -79,13 +79,17 @@ class MainActivity : AppCompatActivity(),ClickItem {
             Log.d("aaaaaaaaaa", "onCreate: $countOpenApp")
            // println(hasNetwork(this))
         }
-        else if(countOpenApp < 5 && hasNetwork(this) == false){
+        else if(getDataCount()!! < 5 && hasNetwork(this) == false){
             adapterView(getData().third!!,getData().first!!,getData().second!!)
-            countOpenApp++
-            Log.d("bbbbbbbbbb", "onCreate: $countOpenApp" )
-            putDataCount(countOpenApp)
+            var count1:Int = getDataCount()!!
+            count1++
+            Log.d("bbbbbbbbbb", "onCreate: ${getDataCount()}" )
+            Log.d("bbbbbbbbbb", "onCreate: $count1" )
+            putDataCount(count1)
         }else if(getDataCount()!! >= 5){
             countOpenApp = 0
+            putDataCount(countOpenApp)
+            Log.d("cccc", "clear ")
             clearData()
         }
 
