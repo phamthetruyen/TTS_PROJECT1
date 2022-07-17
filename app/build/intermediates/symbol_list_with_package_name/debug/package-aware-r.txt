@@ -2453,12 +2453,14 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable decord
+drawable decord_list_img
 drawable decordbottom
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_arrow_back
 drawable ic_clock_black_24dp
 drawable ic_download
 drawable ic_keyboard_black_24dp
@@ -2472,6 +2474,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search
+drawable linear_color
 drawable loading
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2616,6 +2619,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_back1
+id btn_back2
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2748,6 +2753,7 @@ id ignoreRequest
 id image
 id img_Folder
 id img_FolderRandom
+id img_ListFolder
 id img_ListImg
 id immediateStop
 id included
@@ -2995,6 +3001,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id txt_Random
+id txt_nameFolderList
+id txt_totalImg
 id unchecked
 id uniform
 id unlabeled

@@ -2,23 +2,25 @@ package vn.mobifone.tts_project1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import vn.mobifone.tts_project1.model.Stickers
 import vn.mobifone.tts_project1.util.Constants
 import com.google.gson.Gson
+import vn.mobifone.tts_project1.apiInterface.ClickItem
 
 class DetailImgActivity : AppCompatActivity() {
 
     lateinit var imageView: ImageView
     lateinit var textView: TextView
+    lateinit var btnBack: Button
 
     var sticker: String? = null
     var startUrl: String? = null
     var prefix: String? = null
     var position: Int? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +50,8 @@ class DetailImgActivity : AppCompatActivity() {
     }
 
     private fun initView() {
+        btnBack =findViewById(R.id.btn_back2)
+        btnBack.setOnClickListener { finish() }
         imageView = findViewById(R.id.detaiImg)
         textView = findViewById(R.id.detailNameImg)
     }

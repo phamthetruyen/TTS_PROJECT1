@@ -51,13 +51,15 @@ class MyAdapter(val context: Context,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val imageURL: String? = start_url + stickers?.get(position)?.folder + "/" + stickers?.get(position)?.folder + "_" + prefix + "1" + ".png"
-        Log.e("imageURL", "String" + imageURL)
-        holder.folder.text = stickers?.get(position)?.folder.toString()
+
         Glide.with(context)
             .load(imageURL)
             .override(100, 100)
             .placeholder(R.drawable.loading)
             .into(holder.image)
+        if(Locale.getDefault().language=="en"){
+            holder.folder.text = stickers?.get(position)?.name_en.toString()
+        }else  holder.folder.text = stickers?.get(position)?.name_vi.toString()
     }
 
     override fun getItemCount(): Int {

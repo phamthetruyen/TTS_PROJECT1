@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import vn.mobifone.tts_project1.R
 import vn.mobifone.tts_project1.apiInterface.ClickItem
 import vn.mobifone.tts_project1.model.Stickers
+import java.util.*
 
 
 class MyAdapterRandom(val context: Context,
@@ -27,7 +28,6 @@ class MyAdapterRandom(val context: Context,
         var imageRd : ImageView=itemView.findViewById(R.id.img_FolderRandom)
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var itemViewRd = LayoutInflater.from(context).inflate(R.layout.item_folder_random,parent,false)
         return ViewHolder(itemViewRd)
@@ -35,18 +35,20 @@ class MyAdapterRandom(val context: Context,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val tmpRandom = (1 until stickers!!.size).random()
-        val imageURL: String? = start_url + stickers?.get(tmpRandom)?.folder+ "/" + stickers?.get(tmpRandom)?.folder + "_" + prefix + "1" + ".png"
-        Log.e("imageURL", "String" + imageURL)
-        holder.folderRd.text = stickers?.get(tmpRandom)?.folder.toString()
+        val imageURL: String? = start_url + stickers?.get(tmpRandom)?.folder+ "/" + stickers?.get(tmpRandom)?.folder + "_" + prefix + tmpRandom + ".png"
+
         Glide.with(context)
             .load(imageURL)
             .override(100, 100)
             .placeholder(R.drawable.loading)
             .into(holder.imageRd)
+        if(Locale.getDefault().language=="en"){
+            holder.folderRd.text = stickers?.get(tmpRandom)?.name_en.toString()
+        }else  holder.folderRd.text = stickers?.get(tmpRandom)?.name_vi.toString()
         holder.imageRd.setOnClickListener { listener.onItemClick(tmpRandom) }
     }
 
     override fun getItemCount(): Int {
-        return 9
+        return 21
     }
 }

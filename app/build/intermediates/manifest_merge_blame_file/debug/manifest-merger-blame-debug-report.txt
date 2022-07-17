@@ -39,28 +39,28 @@
 24        android:theme="@style/Theme.TTS_PROJECT1" >
 24-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:13:9-50
 25        <activity
-25-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:14:9-16:40
+25-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:14:9-17:15
 26            android:name="vn.mobifone.tts_project1.DetailImgActivity"
 26-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:15:13-46
-27            android:exported="false" />
-27-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:16:13-37
+27            android:exported="true" />
+27-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:16:13-36
 28        <activity
-28-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:9-19:40
+28-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:18:9-20:39
 29            android:name="vn.mobifone.tts_project1.ListImgFolderActivity"
-29-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:18:13-50
-30            android:exported="false" />
-30-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:19:13-37
+29-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:19:13-50
+30            android:exported="true" />
+30-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:13-36
 31        <activity
-31-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:20:9-28:20
+31-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:21:9-28:20
 32            android:name="vn.mobifone.tts_project1.MainActivity"
-32-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:21:13-41
+32-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:13-41
 33            android:exported="true" >
-33-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:22:13-36
+33-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:23:13-36
 34            <intent-filter>
-34-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:23:13-27:29
+34-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:24:13-27:29
 35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:24:17-69
-35-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:24:25-66
+35-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:25:17-69
+35-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:25:25-66
 36
 37                <category android:name="android.intent.category.LAUNCHER" />
 37-->C:\Users\VietHoang\Desktop\TTS_PROJECT1\app\src\main\AndroidManifest.xml:26:17-77

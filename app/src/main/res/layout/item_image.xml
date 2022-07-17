@@ -5,12 +5,14 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
-    android:layout_marginTop="20dp">
+    android:layout_marginTop="20dp"
+    android:background="@drawable/decord_list_img">
 
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:cardCornerRadius="75dp">
+        app:cardCornerRadius="75dp"
+       >
 
         <ImageView
             android:layout_gravity="center"

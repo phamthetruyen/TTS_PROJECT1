@@ -13,10 +13,9 @@
     <ImageView
         android:id="@+id/img_FolderRandom"
         android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_height="85dp"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:layout_marginTop="15dp"
         android:layout_weight="2" />
 
     <TextView

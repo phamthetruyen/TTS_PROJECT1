@@ -6,59 +6,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+  
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/decordbottom">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:text="Featured"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="30dp" />
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="right|center"
-            android:layout_marginLeft="200dp"
-            android:background="@drawable/ic_search" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_folder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"></androidx.recyclerview.widget.RecyclerView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_folder"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"></androidx.recyclerview.widget.RecyclerView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Popular"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
-    </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="20dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_folder_random"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Popular"
+               android:textColor="@color/black"
+               android:textSize="25dp" />
+       </LinearLayout>
 
-    </androidx.recyclerview.widget.RecyclerView>
-
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_folder_random"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"></androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>
