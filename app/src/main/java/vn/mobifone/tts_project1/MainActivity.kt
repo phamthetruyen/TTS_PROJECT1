@@ -1,8 +1,11 @@
 package vn.mobifone.tts_project1
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.ConnectivityManager
 import android.net.IpPrefix
+import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -41,7 +44,7 @@ class MainActivity : AppCompatActivity(), ClickItem {
 
     private lateinit var sharePreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-    private var count: Int = 1
+    private var count: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,18 +60,19 @@ class MainActivity : AppCompatActivity(), ClickItem {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = gridLayoutManager
 
-        getMyData()
-//        if(count == 0){
-//            getMyData()
-//        }else if(getDataCount()!! < 5 ){
-//            var countData:Int = getDataCount()!!
-//            countData++
-//            putDataCount(countData)
-//        }else if(getDataCount()!! >= 5){
-//            count =0
-//            putDataCount(count)
-//            clearData()
-//        }
+//        getMyData()
+        if(count == 0 && hasNetwork(this) == true){
+            getMyData()
+        }else if(getDataCount()!! < 5 && hasNetwork(this) == false ){
+            adapterView(getCountData().third!!,getCountData().first!!,getCountData().second!!)
+            var countData:Int = getDataCount()!!
+            countData++
+            putDataCount(countData)
+        }else if(getDataCount()!! >= 5){
+            count =0
+            putDataCount(count)
+            clearData()
+        }
     }
 
     private fun getMyData() {
@@ -88,16 +92,9 @@ class MainActivity : AppCompatActivity(), ClickItem {
                 prefix = response.body()!!.prefix_
 
                 count++
-                putData(start_url!!,prefix!!,listStickers!!,count)
+                putData(start_url!!, prefix!!, listStickers!!, count)
 
-                myAdapter =
-                    MyAdapter(baseContext, listStickers, start_url, prefix, this@MainActivity)
-                myAdapter.notifyDataSetChanged()
-                recyclerView.adapter = myAdapter
-
-                myAdapterRandom = MyAdapterRandom(baseContext, listStickers, start_url, prefix, this@MainActivity)
-                myAdapterRandom.notifyDataSetChanged()
-                recyclerViewRandom.adapter = myAdapterRandom
+                adapterView(getCountData().third!!,getCountData().first!!,getCountData().second!!)
             }
 
             override fun onFailure(call: Call<MyData?>, t: Throwable) {
@@ -134,25 +131,61 @@ class MainActivity : AppCompatActivity(), ClickItem {
         editor.apply()
         editor.commit()
     }
-    private fun clearData(){
+
+    private fun clearData() {
         sharePreferences = this.getSharedPreferences(Constants.SHAREDPREFER, MODE_PRIVATE)
         editor = sharePreferences.edit()
         editor.clear()
     }
-    private fun getData():Triple<String?,String?,ArrayList<Stickers>?>{
+
+    private fun getCountData(): Triple<String?, String?, ArrayList<Stickers>?> {
         sharePreferences = this.getSharedPreferences(Constants.SHAREDPREFER, MODE_PRIVATE)
 
-        val start_urldata :String? = sharePreferences.getString(Constants.STARTURL,"")
-        val prefixdata:String? = sharePreferences.getString(Constants.PREFIX,"")
-        return Triple(start_urldata,prefixdata,listStickers)
+        val start_urldata: String? = sharePreferences.getString(Constants.STARTURL, "")
+        val prefixdata: String? = sharePreferences.getString(Constants.PREFIX, "")
+        val listItem :String? = sharePreferences.getString(Constants.OBJECT,"")
+        val stickers = Gson().fromJson<Stickers>(listItem!!)
+        return Triple(start_urldata, prefixdata, stickers)
     }
 
-    private fun getDataCount():Int?{
+    private fun getDataCount(): Int? {
         sharePreferences = this.getSharedPreferences(Constants.SHAREDPREFER, MODE_PRIVATE)
-        var count:Int = sharePreferences.getInt(Constants.COUNT,0)
-        return  count
+        var count: Int = sharePreferences.getInt(Constants.COUNT, 0)
+        return count
     }
-    inline fun <reified T> Gson.fromJson(json:String) = fromJson<ArrayList<Stickers>>(json,object :TypeToken<ArrayList<Stickers>>(){}.type)
+
+    inline fun <reified T> Gson.fromJson(json: String) =
+        fromJson<ArrayList<Stickers>>(json, object : TypeToken<ArrayList<Stickers>>() {}.type)
+
+    fun adapterView(listSticker: ArrayList<Stickers>, start_url: String, prefix: String) {
+        myAdapter = MyAdapter(this@MainActivity,
+        listSticker!!,
+        start_url,
+        prefix!!,this@MainActivity)
+
+        myAdapterRandom = MyAdapterRandom(
+            this@MainActivity,
+            listSticker!!,
+            start_url,
+            prefix!!,
+            this@MainActivity
+        )
+        myAdapter.notifyDataSetChanged()
+        myAdapterRandom.notifyDataSetChanged()
+
+        recyclerView.adapter = myAdapter
+        recyclerViewRandom.adapter = myAdapterRandom
+    }
+    fun hasNetwork(context: Context): Boolean? {
+        var isConnected: Boolean? = false // Initial Value
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+        if (activeNetwork != null && activeNetwork.isConnected)
+            isConnected = true
+        return isConnected
+    }
+
 
     override fun onItemClick(position: Int) {
         val intent = Intent(this, ListImgFolderActivity::class.java)

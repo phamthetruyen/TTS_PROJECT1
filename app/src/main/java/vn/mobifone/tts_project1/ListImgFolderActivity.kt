@@ -29,6 +29,7 @@ class ListImgFolderActivity : AppCompatActivity(), ClickItem {
     lateinit var textViewTotalImage: TextView
     lateinit var imageFolder: ImageView
 
+
     var sticker: String? = null
     var starturl: String? = null
     var prefix: String? = null
@@ -93,6 +94,7 @@ class ListImgFolderActivity : AppCompatActivity(), ClickItem {
 
     override fun onItemClick(position: Int) {
         val intent = Intent(this, DetailImgActivity::class.java)
+
         intent.putExtra(Constants.STICKER, sticker)
         intent.putExtra(Constants.STARTURL, starturl)
         intent.putExtra(Constants.PREFIX, prefix)
