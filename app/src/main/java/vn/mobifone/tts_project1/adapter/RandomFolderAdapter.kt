@@ -35,22 +35,21 @@ class RandomFolderAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 //        var tmpValue : Int = Random.nextInt(listStickers!!.size - 1) + 1
         var tmpValue : Int = (1 until listStickers!!.size).random()
-        e("tmp valie", " $tmpValue")
         val imageURL: String? =
-            start_url + listStickers?.get(tmpValue)?.folder + "/" + listStickers?.get(tmpValue)?.folder + "_" + prefix_ + "1" + ".png"
-        holder.foldername.text = listStickers?.get(tmpValue)?.name_en.toString()
+            start_url + listStickers?.get(position)?.folder + "/" + listStickers?.get(position)?.folder + "_" + prefix_ + tmpValue + ".png"
+        holder.foldername.text = listStickers?.get(position)?.name_en.toString()
         Glide.with(context)
             .load(imageURL)
             .override(100, 100)
             .placeholder(R.drawable.ic_launcher_background)
             .into(holder.image)
         holder.image.setOnClickListener {
-            listener.onItemClick(tmpValue)
+            listener.onItemClick(position)
         }
     }
 
     override fun getItemCount(): Int {
-        return 5
+        return listStickers!!.size
     }
 }
 

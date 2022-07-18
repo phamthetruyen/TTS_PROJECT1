@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +27,7 @@ class ListImageInFolderActivity : AppCompatActivity(), OnItemClickListener {
     lateinit var textViewFolderName : TextView
     lateinit var textViewTotalImage : TextView
     lateinit var imageFolder : ImageView
+    lateinit var actionBar: ActionBar
 
     var sticker : String ?= null
     var startURL : String ?= null
@@ -45,6 +48,9 @@ class ListImageInFolderActivity : AppCompatActivity(), OnItemClickListener {
         textViewFolderName = findViewById(R.id.list_img_folder_name)
         textViewTotalImage = findViewById(R.id.list_img_folder_total_image)
         imageFolder = findViewById(R.id.list_img_folder_folder_img)
+        actionBar = supportActionBar!!
+        actionBar.setTitle("List Image")
+        actionBar.setDisplayHomeAsUpEnabled(true)
     }
 
     fun getData() {
@@ -77,5 +83,15 @@ class ListImageInFolderActivity : AppCompatActivity(), OnItemClickListener {
         intent.putExtra(Constants.PREFIX, prefix)
         intent.putExtra(Constants.POSITION, position.inc())
         startActivity(intent)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

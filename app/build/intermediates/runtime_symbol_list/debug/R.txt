@@ -2722,7 +2722,6 @@ int id flip 0x7f0800c9
 int id floating 0x7f0800ca
 int id folder_img 0x7f0800cb
 int id folder_name 0x7f0800cc
-int id folder_recycle 0x7f0800cd
 int id forever 0x7f0800ce
 int id fragment_container_view_tag 0x7f0800cf
 int id frost 0x7f0800d0
@@ -2768,6 +2767,7 @@ int id line1 0x7f0800f7
 int id line3 0x7f0800f8
 int id linear 0x7f0800f9
 int id listMode 0x7f0800fa
+int id list_folder_recycle 0x7f0801f7
 int id list_img_folder_folder_img 0x7f0801f1
 int id list_img_folder_name 0x7f0801f2
 int id list_img_folder_recycle 0x7f0800fc
@@ -2873,9 +2873,9 @@ int id postLayout 0x7f08015d
 int id progress_circular 0x7f08015e
 int id progress_horizontal 0x7f08015f
 int id radio 0x7f080160
-int id random_folder 0x7f080161
 int id random_folder_img 0x7f0801f5
 int id random_folder_name 0x7f0801f6
+int id random_folder_recycle 0x7f0801f8
 int id ratio 0x7f080162
 int id rectangles 0x7f080163
 int id reverseSawtooth 0x7f080164

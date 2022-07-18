@@ -2,8 +2,10 @@ package vn.mobifone.tts_project1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import vn.mobifone.tts_project1.model.Stickers
@@ -13,6 +15,7 @@ class ImageDetailsActivity : AppCompatActivity() {
 
     lateinit var imageView: ImageView
     lateinit var textView: TextView
+    lateinit var actionBar: ActionBar
 
     var sticker : String ?= null
     var startURL : String ?= null
@@ -41,6 +44,9 @@ class ImageDetailsActivity : AppCompatActivity() {
     private fun initView() {
         imageView = findViewById(R.id.img_detail)
         textView = findViewById(R.id.img_detail_index)
+        actionBar = supportActionBar!!
+        actionBar.setTitle("Image Detail")
+        actionBar.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun getData() {
@@ -50,5 +56,15 @@ class ImageDetailsActivity : AppCompatActivity() {
         prefix = intent.getStringExtra(Constants.PREFIX)
         position = intent.getIntExtra(Constants.POSITION, 0)
 //        e("position", "position $position")
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

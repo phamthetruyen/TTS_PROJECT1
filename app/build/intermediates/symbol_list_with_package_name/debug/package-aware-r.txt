@@ -2723,7 +2723,6 @@ id flip
 id floating
 id folder_img
 id folder_name
-id folder_recycle
 id forever
 id fragment_container_view_tag
 id frost
@@ -2769,6 +2768,7 @@ id line1
 id line3
 id linear
 id listMode
+id list_folder_recycle
 id list_img_folder_folder_img
 id list_img_folder_name
 id list_img_folder_recycle
@@ -2874,9 +2874,9 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
-id random_folder
 id random_folder_img
 id random_folder_name
+id random_folder_recycle
 id ratio
 id rectangles
 id reverseSawtooth
