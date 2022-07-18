@@ -186,7 +186,6 @@ class MainActivity : AppCompatActivity(), ClickItem {
         return isConnected
     }
 
-
     override fun onItemClick(position: Int) {
         val intent = Intent(this, ListImgFolderActivity::class.java)
         val sticker = Gson().toJson(listStickers?.get(position))
