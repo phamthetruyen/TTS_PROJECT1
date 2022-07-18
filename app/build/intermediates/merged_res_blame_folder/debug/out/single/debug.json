@@ -8,6 +8,10 @@
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24.xml"
+    },
+    {
         "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
@@ -28,8 +32,8 @@
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\drawable\\ic_backgroundtext.xml"
     },
     {
-        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main3.xml.flat",
-        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\activity_main3.xml"
+        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_list_detail_item.xml.flat",
+        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\activity_list_detail_item.xml"
     },
     {
         "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -68,10 +72,6 @@
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -88,8 +88,12 @@
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main2.xml.flat",
-        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\activity_main2.xml"
+        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_list_folder.xml.flat",
+        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\activity_list_folder.xml"
+    },
+    {
+        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_list_item_of_folder.xml.flat",
+        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\activity_list_item_of_folder.xml"
     },
     {
         "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -106,6 +110,10 @@
     {
         "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\layout_item_img.xml.flat",
         "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\layout\\item_img.xml"
+    },
+    {
+        "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_item1.xml.flat",
+        "source": "E:\\TTS\\TTS_PROJECT1\\app\\src\\main\\res\\drawable\\ic_item1.xml"
     },
     {
         "merged": "E:\\TTS\\TTS_PROJECT1\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",

@@ -39,7 +39,6 @@ class AdapterRandom(val context: Context,
 
     override fun onBindViewHolder(holder: AdapterRandom.ViewHolder, position: Int) {
         val rnds = (1 until  listStickers.size).random()
-        Log.e("vvv", "onBindViewHolder: $rnds" )
         val imageURL: String? =
             start_url + listStickers?.get(rnds)?.folder + "/" + listStickers?.get(rnds)?.folder + "_" + prefix + "1" + ".png"
         holder.nameFolder.text = listStickers[rnds].folder

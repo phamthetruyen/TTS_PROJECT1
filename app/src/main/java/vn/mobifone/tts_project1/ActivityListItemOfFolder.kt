@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.retrofit.util.Constan
 import com.google.gson.Gson
 import vn.mobifone.tts_project1.adapter.RecyclerAdapterImg
 import vn.mobifone.tts_project1.interfaces.ClickItem
 import vn.mobifone.tts_project1.model.Stickers
 
-class MainActivity2 : AppCompatActivity(), ClickItem {
+class ActivityListItemOfFolder : AppCompatActivity(), ClickItem {
     lateinit var rcv : RecyclerView
     lateinit var linearLayoutManager: LinearLayoutManager
     lateinit var recyclerAdapterImg: RecyclerAdapterImg
@@ -21,7 +22,7 @@ class MainActivity2 : AppCompatActivity(), ClickItem {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_list_item_of_folder)
         rcv = findViewById(R.id.rcv2)
         rcv.setHasFixedSize(true)
 
@@ -36,27 +37,26 @@ class MainActivity2 : AppCompatActivity(), ClickItem {
 
         val intent = getIntent()
 
-        ob = intent.getStringExtra("object")
+        ob = intent.getStringExtra(Constan.OBJECT)
         val icon = Gson().fromJson(ob, Stickers::class.java)
 
-        prefix = intent.getStringExtra("prefix")
-        start_url = intent.getStringExtra("start_url")
-        folder = intent.getStringExtra("folder")
+        prefix = intent.getStringExtra(Constan.PREFIX)
+        start_url = intent.getStringExtra(Constan.START_URL)
+        folder = intent.getStringExtra(Constan.FOLDER)
 
         recyclerAdapterImg = RecyclerAdapterImg(this,start_url!!,prefix!!,icon.folder,icon.totalImage,icon.name_en,icon.name_vi,this)
         recyclerAdapterImg.notifyDataSetChanged()
         rcv.adapter = recyclerAdapterImg
-
     }
 
     override fun onItemClick(position: Int) {
 
-        val intent = Intent(this,MainActivity3::class.java)
-        intent.putExtra("item",ob)
-        intent.putExtra("prefix",prefix)
-        intent.putExtra("start_url",start_url)
-        intent.putExtra("folder",folder)
-        intent.putExtra("position",position.inc())
+        val intent = Intent(this,ActivityListDetailItem::class.java)
+        intent.putExtra(Constan.OBJECT,ob)
+        intent.putExtra(Constan.PREFIX,prefix)
+        intent.putExtra(Constan.START_URL,start_url)
+        intent.putExtra(Constan.FOLDER,folder)
+        intent.putExtra(Constan.POSITION,position.inc())
 //        Log.e("bb", "onItemClick: ${position.inc()}", )
         startActivity(intent)
 

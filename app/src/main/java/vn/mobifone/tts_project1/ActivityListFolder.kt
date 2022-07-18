@@ -26,7 +26,6 @@ import vn.mobifone.tts_project1.api.ApiInterFace
 import vn.mobifone.tts_project1.interfaces.ClickItem
 import vn.mobifone.tts_project1.model.MyData
 import vn.mobifone.tts_project1.model.Stickers
-import java.lang.reflect.Type
 
 
 const val BASE_URL = "https://mystoragetm.s3.ap-southeast-1.amazonaws.com/"
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity(),ClickItem {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_list_folder)
 
         rcvFolder = findViewById(R.id.rcvFolder)
         rcvRandom = findViewById(R.id.randomFolder)
@@ -64,54 +63,30 @@ class MainActivity : AppCompatActivity(),ClickItem {
         rcvRandom.layoutManager = linearLayout
 
 
-//        if(hasNetwork(this) == true){
-//            getMyData()
-//        }else{
-//            println("aaaaaaaaa")
-//            adapterView(getData().third!!,getData().first!!,getData().second!!)
-//        }
-
-
-
-
         if(countOpenApp == 0 && hasNetwork(this) == true){
            getMyData()
-            Log.d("aaaaaaaaaa", "onCreate: $countOpenApp")
-           // println(hasNetwork(this))
         }
         else if(getDataCount()!! < 5 && hasNetwork(this) == false){
             adapterView(getData().third!!,getData().first!!,getData().second!!)
             var count1:Int = getDataCount()!!
             count1++
-            Log.d("bbbbbbbbbb", "onCreate: ${getDataCount()}" )
-            Log.d("bbbbbbbbbb", "onCreate: $count1" )
             putDataCount(count1)
         }else if(getDataCount()!! >= 5){
             countOpenApp = 0
             putDataCount(countOpenApp)
-            Log.d("cccc", "clear ")
             clearData()
         }
-
-      //  getMyData()
 
     }
 
 
 
     private fun getMyData() {
-
-
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            // cache
-            //.client(okHttpClient)
-
             .baseUrl(BASE_URL)
             .build()
             .create(ApiInterFace::class.java)
-
-
         val retrofitData = retrofitBuilder.getData()
         retrofitData.enqueue(object : Callback<MyData?> {
             override fun onResponse(call: Call<MyData?>, response: Response<MyData?>) {
@@ -124,40 +99,22 @@ class MainActivity : AppCompatActivity(),ClickItem {
                 putData(start_url,prefix!!,responebody!!,countOpenApp)
 
                 adapterView(getData().third!!,getData().first!!,getData().second!!)
-//                if(countOpenApp == 0){
-//                    putData(start_url,prefix!!,responebody!!)
-//                    countOpenApp++
-//                    adapterView(getData().third!!,getData().first!!,getData().second!!)
-//                }
-//                else if(countOpenApp < 5){
-//                    adapterView(getData().third!!,getData().first!!,getData().second!!)
-//                    countOpenApp++
-//                }else{
-//                    countOpenApp = 0
-//                    clearData()
-//                }
-
             }
 
             override fun onFailure(call: Call<MyData?>, t: Throwable) {
             }
         })
     }
-
-    fun behavior(){
-
-    }
-
     override fun onItemClick(position: Int) {
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, ActivityListItemOfFolder::class.java)
 
         val ob = Gson().toJson(responebody?.get(position))
-        intent.putExtra("object", ob)
+        intent.putExtra(Constan.OBJECT, ob)
 
-        intent.putExtra("folder", responebody)
-        intent.putExtra("start_url", start_url)
-        intent.putExtra("prefix", prefix)
-        intent.putExtra("folder", responebody?.get(position)?.folder)
+       // intent.putExtra("folder", responebody)
+        intent.putExtra(Constan.START_URL, start_url)
+        intent.putExtra(Constan.PREFIX, prefix)
+        intent.putExtra(Constan.FOLDER, responebody?.get(position)?.folder)
 
         startActivity(intent)
     }
@@ -173,7 +130,6 @@ class MainActivity : AppCompatActivity(),ClickItem {
 
         val json : String =Gson().toJson(respon)
         preferencesEdt.putString(Constan.OBJECT, json)
-     //   preferencesEdt.putString(Constan.OBJECT,respon.toString())
 
         preferencesEdt.apply()
         preferencesEdt.commit()
@@ -186,7 +142,6 @@ class MainActivity : AppCompatActivity(),ClickItem {
         preferencesEdt = sharedPreferences.edit()
 
         preferencesEdt.putInt(Constan.COUNT,count)
-
 
         preferencesEdt.apply()
         preferencesEdt.commit()
@@ -210,7 +165,11 @@ class MainActivity : AppCompatActivity(),ClickItem {
 
         return count
     }
-
+    fun clearData(){
+        sharedPreferences = this.getSharedPreferences(Constan.SHARE_PREFERENCE, MODE_PRIVATE)
+        preferencesEdt = sharedPreferences.edit()
+        preferencesEdt.clear()
+    }
 
     inline fun <reified T> Gson.fromJson(json: String) = fromJson<ArrayList<Stickers>>(json, object: TypeToken<ArrayList<Stickers>>() {}.type)
 
@@ -231,13 +190,6 @@ class MainActivity : AppCompatActivity(),ClickItem {
 
         rcvFolder.adapter = adapter
         rcvRandom.adapter = adapterRandom
-    }
-
-    fun clearData(){
-        sharedPreferences = this.getSharedPreferences(Constan.SHARE_PREFERENCE, MODE_PRIVATE)
-        preferencesEdt = sharedPreferences.edit()
-
-        preferencesEdt.clear()
     }
 
     fun hasNetwork(context: Context): Boolean? {

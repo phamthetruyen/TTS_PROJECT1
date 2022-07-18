@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import vn.mobifone.tts_project1.MainActivity2
+import com.example.retrofit.util.Constan
 import vn.mobifone.tts_project1.R
 import vn.mobifone.tts_project1.interfaces.ClickItem
 import java.util.*
@@ -35,14 +35,10 @@ class RecyclerAdapterImg(
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgIcon: ImageView
         var nameIcon: TextView
-        //       var img : ImageView
-        //        var ngonNgu : TextView
 
         init {
             imgIcon = itemView.findViewById(R.id.img_icon)
             nameIcon = itemView.findViewById(R.id.nameimg)
-            //   img = itemView.findViewById(R.id.imgv)
-//            ngonNgu = itemView.findViewById(R.id.NgonNgu)
         }
     }
 
@@ -50,7 +46,7 @@ class RecyclerAdapterImg(
 
         val positions = position
         val url: String? =
-            start_url + folder + "/" + folder + "_" + prefix + (positions + 1) + ".png"
+            start_url + folder + "/" + folder + "_" + prefix + (positions + 1) + Constan.PNG
         Glide.with(context)
             .load(url)
             .override(100, 100)

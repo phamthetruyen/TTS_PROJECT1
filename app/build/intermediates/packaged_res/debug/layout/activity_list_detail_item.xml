@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#EFDEDE"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3">
+    tools:context=".ActivityListDetailItem">
     <ImageView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,4 +6,7 @@ object Constan {
     const val PREFIX = "prefix"
     const val OBJECT = "object"
     const val COUNT ="count"
+    const val FOLDER = "folder"
+    const val POSITION ="positions"
+    const val PNG =".png"
 }

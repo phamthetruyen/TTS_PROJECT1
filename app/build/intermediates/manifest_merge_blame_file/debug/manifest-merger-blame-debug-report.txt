@@ -37,14 +37,14 @@
 23-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:12:9-50
 24        <activity
 24-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:13:9-15:40
-25            android:name="vn.mobifone.tts_project1.MainActivity3"
-25-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:14:13-42
+25            android:name="vn.mobifone.tts_project1.ActivityListDetailItem"
+25-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:14:13-51
 26            android:exported="false" />
 26-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:15:13-37
 27        <activity
 27-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:16:9-19:20
-28            android:name="vn.mobifone.tts_project1.MainActivity2"
-28-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:13-42
+28            android:name="vn.mobifone.tts_project1.ActivityListItemOfFolder"
+28-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:17:13-53
 29            android:exported="false" >
 29-->E:\TTS\TTS_PROJECT1\app\src\main\AndroidManifest.xml:18:13-37
 30        </activity>

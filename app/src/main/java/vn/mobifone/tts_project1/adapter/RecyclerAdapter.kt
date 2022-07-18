@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide
 import vn.mobifone.tts_project1.R
 import vn.mobifone.tts_project1.interfaces.ClickItem
 import vn.mobifone.tts_project1.model.Stickers
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RecyclerAdapter(
@@ -32,8 +34,6 @@ class RecyclerAdapter(
             img = itemView.findViewById(R.id.imv)
         }
     }
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
         var itemView = LayoutInflater.from(context).inflate(R.layout.item_folder, parent, false)
         return ViewHolder(itemView)
@@ -50,20 +50,19 @@ class RecyclerAdapter(
             .override(100, 100)
             .placeholder(R.drawable.load)
             .into(holder.img)
+        if (Locale.getDefault().language == "en") {
+            holder.nameFolder.text =listStickers.get(position).name_en
+        } else {
+            holder.nameFolder.text = listStickers.get(position).name_vi
+        }
         holder.img.setOnClickListener {
             listener.onItemClick(position)
         }
 
     }
-
-
     override fun getItemCount(): Int {
         return listStickers.size
     }
-
-
-
-
 }
 
 

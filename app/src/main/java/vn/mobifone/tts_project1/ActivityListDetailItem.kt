@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.example.retrofit.util.Constan
 import com.google.gson.Gson
 import vn.mobifone.tts_project1.model.Stickers
 
-class MainActivity3 : AppCompatActivity() {
+class ActivityListDetailItem : AppCompatActivity() {
     lateinit var img : ImageView
     lateinit var text : TextView
     var stickerItem :String ?=null
@@ -19,7 +20,7 @@ class MainActivity3 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_list_detail_item)
 
         initView()
         getData()
@@ -33,16 +34,18 @@ class MainActivity3 : AppCompatActivity() {
 
     private fun getData() {
         val intent = intent
-        stickerItem = intent.getStringExtra("item")
+
+        stickerItem = intent.getStringExtra(Constan.OBJECT)
         val stickerOb = Gson().fromJson(stickerItem, Stickers::class.java)
-        prefix = intent.getStringExtra("prefix")
-        start_url = intent.getStringExtra("start_url")
-        folder = intent.getStringExtra("folder")
-        position = intent.getIntExtra("position",0)
+
+        prefix = intent.getStringExtra(Constan.PREFIX)
+        start_url = intent.getStringExtra(Constan.START_URL)
+        folder = intent.getStringExtra(Constan.FOLDER)
+        position = intent.getIntExtra(Constan.POSITION,0)
 
         text.text= position.toString()
         val imageURL: String? =
-            start_url + stickerOb.folder + "/" + stickerOb.folder + "_" + prefix + position + ".png"
+            start_url + stickerOb.folder + "/" + stickerOb.folder + "_" + prefix + position + Constan.PNG
 
         Glide.with(this)
             .load(imageURL)
